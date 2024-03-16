@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <title>Love Calculator</title>
+    <style>
+        #loveText {
+            font-weight: bold;
+            font-family: sans-serif;
+            text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+        }
+        
+        section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url();
+    background-size: cover;
+    background-position: center center;
+}
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(rgba(232, 156, 195, 0.8),rgba(0, 0, 0, 0.0));
+    width: 550px;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 10px 20px 60px #c73456;
+}
+.control input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: #222;
+    border: none;
+    outline: none;
+    margin: 1em 0;
+    background-color: transparent;
+    border: solid 3px;
+    border-bottom: 3px solid;
+    border-radius: 15px;
+}
+
+
+    </style>
+    <script>
+        function getMessage() {
+    // Get the value of the name input field
+    var name = document.getElementById("nameInput").value;
+
+    // Check if the name is empty
+    if (name.trim() === "") {
+        // If name is empty, show an alert to prompt the user to enter their name
+        Swal.fire({
+            text: "Please Enter a Name okay!",
+            imageUrl: "https://media.tenor.com/Fkv_kaX3RtcAAAAM/spy-x-family-anya.gif",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "bruh!"
+        });
+    } else {
+        // Proceed with generating the message based on the random result
+        var result = Math.floor(Math.random() * 100) + 1;
+        if (result > 80) {
+            Swal.fire({
+                title: "aww so sweet you like each other",
+                text: result + "%",
+                imageUrl: "https://i.pinimg.com/originals/02/69/f9/0269f93d86dcd8cb7f77b83a5e838c48.gif",
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: "custom Image"
+            });
+        } else if (result > 50) {
+            Swal.fire({
+                title: "it's neither she/he like you or not",
+                text: result + "%",
+                imageUrl: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/02/Denying-Tsundere-Meme.jpg",
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: "custom Image"
+            });
+        } else {
+            Swal.fire({
+                title: "it's seems you and him/her not match",
+                text: result + "%",
+                imageUrl: "https://media1.tenor.com/m/0v2F2nUXnu4AAAAC/menhera-chan.gif",
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: "custom Image"
+            });
+        }
+    }
+}
+
+        
+        
+    </script>
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <div class="text-center">
+                <p id="loveText">Love Calculator</p>
+            </div>
+            <div class="text-center">
+                <img src="https://media.tenor.com/JTbYdv0h2GEAAAAj/blonde-big-eyes.gif"
+                     style="height: 200px" />
+            </div>
+            <form action="#">
+                <div class="control">
+                    <input type="text" name="name1" id="nameInput" placeholder="Enter your name" required>
+                </div>
+                <br>
+                <div class="control">
+                    <input type="text" name="name2" id="nameInput" placeholder="Enter your Crush Name" required>
+                </div>
+                <br>
+                     <div class="text-center">
+                        <button type="button" class="btn btn-dark" onclick="getMessage()">Check Result</button>
+                     </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
