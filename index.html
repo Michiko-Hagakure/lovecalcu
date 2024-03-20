@@ -10,6 +10,11 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
     <title>Love Calculator</title>
     <style>
+        .form-container {
+            max-width: 500px;
+            padding: 0 auto;
+            padding: 20px;
+        }
         #loveText {
             font-weight: bold;
             font-family: sans-serif;
@@ -71,6 +76,12 @@
     border: solid 3px;
     border-bottom: 3px solid;
     border-radius: 15px;
+}
+        @media (max-width:768px) {
+    .form-container {
+        max-width: 100%;
+        padding: 10px;
+    }
 }
 
 
